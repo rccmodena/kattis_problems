@@ -1,3 +1,7 @@
+# Python
+__pychache__/
+*.py[cod]
+
 # Executables
 *.exe
 
