@@ -1,2 +1,5 @@
-submit
+# Executables
 *.exe
+
+# token
+.kattisrc
