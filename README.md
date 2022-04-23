@@ -12,6 +12,12 @@ Anaconda prompt:
 $ conda activate kattis
 ```
 
+## Add Paths
+
+```
+$ add_paths.bat
+```
+
 ## C
 
 ### Compile
@@ -20,12 +26,26 @@ $ conda activate kattis
 $ gcc -g -O2 -std=gnu11 -static hello.c -lm -o hello.exe
 ```
 
+```
+$ create_c_exe hello
+```
+
+## Test
+
+```
+$ test_problem hello.py
+```
+
+```
+$ test_problem hello.exe
+```
+
 ## Submit
 
 Anaconda prompt:
 
 ```
-$ python ..\..\..\submit\submit.py pieceofcake2.py
+$ submit hello.py
 ```
 
 ## LICENSE
