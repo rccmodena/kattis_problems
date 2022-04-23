@@ -14,18 +14,6 @@ The input contains an integer N (1≤N≤10000000), the number of stones.
 
 Output the winner, “Alice” or “Bob” (without the quotes), on a line.
 
-| Sample Input 1 | Sample Output 1 |
-| :------------: | :-------------: |
-|       1        |      Alice      |
-
-| Sample Input 2 | Sample Output 2 |
-| :------------: | :-------------: |
-|       2        |       Bob       |
-
-| Sample Input 2 | Sample Output 2 |
-| :------------: | :-------------: |
-|       5        |      Alice      |
-
 ## Info
 
 - Problem ID: twostones

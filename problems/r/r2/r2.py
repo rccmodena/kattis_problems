@@ -1,10 +1,13 @@
 #! /usr/bin/python3
+"""
+Author: Rudi César Comiotto Modena
+Email: rudi.modena@gmail.com
+"""
 
-import sys
-
-for line in sys.stdin:
-    r1s = [int(x) for x in line.split()]
-    r1 = r1s[0]
-    s = r1s[1]
+def main():
+    r1, s = [int(x) for x in input().split()]
     r2 = 2 * s - r1
     print(r2)
+
+if __name__ == '__main__':
+    main()

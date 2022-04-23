@@ -1,3 +1,8 @@
+/*
+Author: Rudi César Comiotto Modena
+Email: rudi.modena@gmail.com
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

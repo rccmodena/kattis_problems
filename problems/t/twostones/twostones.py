@@ -1,9 +1,15 @@
 #! /usr/bin/python3
+"""
+Author: Rudi César Comiotto Modena
+Email: rudi.modena@gmail.com
+"""
 
-import sys
-
-for line in sys.stdin:
-    if int(line) % 2 == 0:
+def main():
+    n = int(input())
+    if n % 2 == 0:
         print("Bob")
     else:
         print("Alice")
+
+if __name__ == '__main__':
+    main()
