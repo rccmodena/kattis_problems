@@ -1,0 +1,1 @@
+set PATH=%PATH%;D:\my_stuff\current\sandbox\kattis\kattis\submit;D:\my_stuff\current\sandbox\kattis\kattis\test;D:\my_stuff\current\sandbox\kattis\kattis\create_c_exe
