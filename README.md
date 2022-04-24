@@ -23,11 +23,23 @@ $ add_paths.bat
 ### Compile
 
 ```
-$ gcc -g -O2 -std=gnu11 -static hello.c -lm -o hello.exe
+$ gcc -Wall -g -O2 -std=gnu11 -static hello.c -lm -o hello.exe
 ```
 
 ```
 $ create_c_exe hello
+```
+
+## C++
+
+### Compile
+
+```
+$ g++ -Wall -g -O2 -std=gnu++17 -static hello.c -lm -o hello.exe
+```
+
+```
+$ create_cpp_exe hello
 ```
 
 ## Test
