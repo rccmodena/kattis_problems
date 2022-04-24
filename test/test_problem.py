@@ -14,12 +14,11 @@ def main(problem, tests_folder):
     Run the tests
     '''
     for file in os.listdir(tests_folder):
-        file_list = file.split('.')
-        if file_list[-1] == 'in':
+        if file[-3:] == '.in':
             with open('tests/' + file, 'r') as content_file:
                 inputs = content_file.read()
 
-            with open('tests/' + file_list[0]+'.ans', 'r') as content_file:
+            with open('tests/' + file[:-3] +'.ans', 'r') as content_file:
                 outputs = content_file.read().strip()
 
             if problem[-3:] == ".py":
@@ -28,7 +27,7 @@ def main(problem, tests_folder):
                 result = (subprocess.run([problem], input=inputs, stdout=subprocess.PIPE, encoding='utf-8').stdout).strip()
 
             if result != outputs:
-                print(f'Test n.: {file_list[0]}, Result: {result}, Expected: {outputs}')
+                print(f'Test n.: {file[-3:]}, Result: {result}, Expected: {outputs}')
                 break
     else:
         print("All tests passed!")
