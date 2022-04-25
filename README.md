@@ -18,6 +18,14 @@ $ conda activate kattis
 $ add_paths.bat
 ```
 
+## Create Problem
+
+### Helper program
+
+```
+$ create_problem hello
+```
+
 ## C
 
 ### Compile
@@ -25,6 +33,8 @@ $ add_paths.bat
 ```
 $ gcc -Wall -g -O2 -std=gnu11 -static hello.c -lm -o hello.exe
 ```
+
+### Helper program
 
 ```
 $ create_c_exe hello
@@ -38,11 +48,15 @@ $ create_c_exe hello
 $ g++ -Wall -g -O2 -std=gnu++17 -static hello.c -lm -o hello.exe
 ```
 
+### Helper program
+
 ```
 $ create_cpp_exe hello
 ```
 
 ## Test
+
+### Helper program
 
 ```
 $ test_problem hello.py
@@ -54,7 +68,7 @@ $ test_problem hello.exe
 
 ## Submit
 
-Anaconda prompt:
+### Helper program
 
 ```
 $ submit hello.py
