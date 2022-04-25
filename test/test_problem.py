@@ -36,7 +36,7 @@ def main(problem, tests_folder):
 if __name__ == '__main__':
     # Create variable with arguments
     problem = sys.argv[1]
-    tests_folder = sys.argv[2]
+    tests_folder = "./tests/"
 
     # main function
     main(problem, tests_folder)
