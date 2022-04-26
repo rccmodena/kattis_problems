@@ -1,6 +1,7 @@
 #
 
 ...
+![wizard](./img/img-0001.jpg)
 
 ## Input
 
