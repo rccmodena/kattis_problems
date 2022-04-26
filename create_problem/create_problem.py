@@ -46,3 +46,6 @@ if __name__ == '__main__':
     create_problem = input()
     if create_problem == "YES":
         main(problem_name)
+        print(f"Problem <{problem_name}> created with success!")
+    else:
+        print(f"Problem <{problem_name}> not created...")
