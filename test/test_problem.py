@@ -27,8 +27,10 @@ def main(problem, tests_folder):
                 result = (subprocess.run([problem], input=inputs, stdout=subprocess.PIPE, encoding='utf-8').stdout).strip()
 
             if result != outputs:
-                print(f'Test n.: {file[:-3]}, Result: {result}, Expected: {outputs}')
-                break
+                output_length = len(outputs)
+                if result[:output_length] != outputs:
+                    print(f'Test n.: {file[:-3]}, Result: {result}, Expected: {outputs}')
+                    break
     else:
         print("All tests passed!")
 
