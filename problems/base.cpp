@@ -8,9 +8,13 @@ Email: rudi.modena@gmail.com
 using namespace std;
 
 int main() {
-    int a;
+    int a, n;
 
     cin >> a;
+
+    if (scanf("%d\n", &n) != 1) {
+        printf("Failed to read n!");
+    }
 
     cout << 1 << endl;
 }
