@@ -16,21 +16,27 @@ import re
 # PATHS
 BASE_WEBSITE = "https://open.kattis.com/problems/"
 PROBLEMS_FOLDER = r"D:\\my_stuff\\current\\sandbox\\kattis\\kattis\\problems\\"
-PROBLEMS_WEBSITE = "https://open.kattis.com/problems?order=problem_difficulty"
+PROBLEMS_WEBSITE_0 = "https://open.kattis.com/problems?order=problem_difficulty"
+PROBLEMS_WEBSITE_N = "https://open.kattis.com/problems?page={i}&order=problem_difficulty"
 
 
 def get_next_problem():
-    page = requests.get(PROBLEMS_WEBSITE)
-    soup = BeautifulSoup(page.content, 'html.parser')
+    for i in range(10):
+        if i == 0:
+            page = requests.get(PROBLEMS_WEBSITE_0)
+        else:
+            page = requests.get(PROBLEMS_WEBSITE_N.format(i=i))
 
-    table_content = soup.find_all("td",  {"class": "name_column"})
-    for table in table_content:
-        problem_name = table.find('a').get('href').split('/')[-1]
-        folder_name = PROBLEMS_FOLDER + problem_name[0] + r'\\' + problem_name + r'\\'
+        soup = BeautifulSoup(page.content, 'html.parser')
+        table_content = soup.find_all("td",  {"class": "name_column"})
 
-        if not os.path.exists(folder_name):
-            print(problem_name)
-            break
+        for table in table_content:
+            problem_name = table.find('a').get('href').split('/')[-1]
+            folder_name = PROBLEMS_FOLDER + problem_name[0] + r'\\' + problem_name + r'\\'
+
+            if not os.path.exists(folder_name):
+                print(problem_name)
+                return problem_name
     else:
         print("All of the problems from the first page are done!")
         problem_name = None
