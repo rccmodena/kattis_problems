@@ -21,6 +21,9 @@ PROBLEMS_WEBSITE_N = "https://open.kattis.com/problems?page={i}&order=problem_di
 
 
 def get_next_problem():
+    '''
+    Get the name of the next problem
+    '''
     for i in range(10):
         if i == 0:
             page = requests.get(PROBLEMS_WEBSITE_0)
@@ -46,7 +49,7 @@ def get_next_problem():
 
 def main(problem_name):
     '''
-    Compile the C source code
+    Create the structure of the problem
     '''
     TESTS_WEBSITE = BASE_WEBSITE + f"{problem_name}/file/statement/samples.zip"
 
