@@ -10,3 +10,6 @@ __pychache__/
 
 # token
 .kattisrc
+
+# Audio Files
+audio/
