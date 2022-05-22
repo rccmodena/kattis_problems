@@ -38,7 +38,6 @@ def get_next_problem():
             folder_name = PROBLEMS_FOLDER + problem_name[0] + r'\\' + problem_name + r'\\'
 
             if not os.path.exists(folder_name):
-                print(problem_name)
                 return problem_name
     else:
         print("All of the problems from the first page are done!")
