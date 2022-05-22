@@ -54,6 +54,7 @@ def main(problem_name):
 
     folder_name = PROBLEMS_FOLDER + problem_name[0] + r'\\' + problem_name + r'\\'
     test_folder_name = folder_name + r'tests\\'
+    audio_folder_name = folder_name + r'audio\\'
 
     if not os.path.exists(folder_name):
         try:
@@ -65,6 +66,7 @@ def main(problem_name):
             return False
         else:
             os.makedirs(folder_name)
+            os.makedirs(audio_folder_name)
             shutil.copyfile(PROBLEMS_FOLDER + 'base.c', folder_name + problem_name + '.c')
             shutil.copyfile(PROBLEMS_FOLDER + 'base.cpp', folder_name + problem_name + '.cpp')
             shutil.copyfile(PROBLEMS_FOLDER + 'base.py', folder_name + problem_name + '.py')
