@@ -1,0 +1,3 @@
+# COUNTINGCLAUSES
+
+- [Problem Description](https://open.kattis.com/problems/countingclauses)
