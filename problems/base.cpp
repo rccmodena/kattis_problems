@@ -3,7 +3,7 @@ Author: Rudi César Comiotto Modena
 Email: rudi.modena@gmail.com
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
