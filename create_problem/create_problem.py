@@ -67,7 +67,7 @@ def main(problem_name):
         else:
             os.makedirs(folder_name)
             os.makedirs(audio_folder_name)
-            shutil.copyfile(PROBLEMS_FOLDER + 'base.c', folder_name + problem_name + '.c')
+            #shutil.copyfile(PROBLEMS_FOLDER + 'base.c', folder_name + problem_name + '.c')
             shutil.copyfile(PROBLEMS_FOLDER + 'base.cpp', folder_name + problem_name + '.cpp')
             shutil.copyfile(PROBLEMS_FOLDER + 'base.py', folder_name + problem_name + '.py')
 
