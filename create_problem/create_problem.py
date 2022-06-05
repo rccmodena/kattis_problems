@@ -52,7 +52,11 @@ def main(problem_name):
     '''
     TESTS_WEBSITE = BASE_WEBSITE + f"{problem_name}/file/statement/samples.zip"
 
-    folder_name = PROBLEMS_FOLDER + problem_name[0] + r'\\' + problem_name + r'\\'
+    if problem_name[0].isdigit():
+        parent_folder_name = '0_9'
+    else:
+        parent_folder_name = problem_name[0]
+    folder_name = PROBLEMS_FOLDER + parent_folder_name + r'\\' + problem_name + r'\\'
     test_folder_name = folder_name + r'tests\\'
     audio_folder_name = folder_name + r'audio\\'
 
